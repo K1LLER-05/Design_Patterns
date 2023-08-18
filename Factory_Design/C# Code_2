@@ -72,7 +72,7 @@ class Program
     }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-In this example, the Factory Design Pattern helps you create different types of food items using the FoodFactory. Just like the previous example, you don't need to know the details of how each food item is created. You simply ask the factory to give you the right food item, and it handles the creation process.
+In this example, the Factory Design Pattern helps you create different types of food items using the FoodFactory. You don't need to know the details of how each food item is created. You simply ask the factory to give you the right food item, and it handles the creation process.
 
 This pattern makes it easy to add new types of food items (like salads or sandwiches) in the future without changing the code that uses the factory. It's like adding new recipes to a menu without altering the restaurant's kitchen setup.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

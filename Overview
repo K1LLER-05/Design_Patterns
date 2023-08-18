@@ -1,6 +1,6 @@
 DESIGN PATTERNS  -> standardized and reusable solution to a specific software design problem
                  -> 3 Categories -> 23 Patterns
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3 Categories
 
 1. Creational Design Pattern    ->  Creational patterns focus on the process of object creation, providing mechanisms to create objects in a flexible and efficient manner

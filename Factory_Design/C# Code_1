@@ -1,0 +1,80 @@
+FACTORY DESIGN PATTERN
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scenario: Toy Factory
+
+Imagine you're building a program for a toy factory that makes different types of toys: cars and dolls.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Define the Toy Interface:
+
+Start by creating an interface that all toys will implement. This will ensure that every toy has a common way to do things, like play.
+
+interface IToy
+{
+    void Play();
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Create Toy Classes:
+
+Next, create classes for each type of toy (Car and Doll), and have them implement the IToy interface.
+
+class Car : IToy
+{
+    public void Play()
+    {
+        Console.WriteLine("Vroom vroom!");
+    }
+}
+
+class Doll : IToy
+{
+    public void Play()
+    {
+        Console.WriteLine("Hello, I'm a doll!");
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Create the Toy Factory:
+
+Now, let's create the "factory" that will make toys for us. This factory will have a method for creating different types of toys.
+
+class ToyFactory
+{
+    public IToy CreateToy(string type)
+    {
+        if (type == "Car")
+        {
+            return new Car();
+        }
+        else if (type == "Doll")
+        {
+            return new Doll();
+        }
+        else
+        {
+            throw new ArgumentException("Invalid toy type");
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Using the Factory:
+
+Finally, let's use our toy factory to create toys without worrying about their detailed creation.
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ToyFactory factory = new ToyFactory();
+
+        IToy car = factory.CreateToy("Car");
+        IToy doll = factory.CreateToy("Doll");
+
+        car.Play();  // Output: Vroom vroom!
+        doll.Play(); // Output: Hello, I'm a doll!
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In this example, the ToyFactory class acts as a factory that creates toys based on the type you provide. When you want a toy, you don't need to know how it's created – you simply ask the factory to give you the right toy, and it handles the details.
+
+This way, the Factory Design Pattern makes it easy to add new types of toys (like planes or robots) without changing the code that uses the factory. Just like in a real toy factory, you can add new machines to make new toys without changing the entire factory setup.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

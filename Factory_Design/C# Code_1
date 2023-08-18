@@ -77,3 +77,4 @@ In this example, the ToyFactory class acts as a factory that creates toys based 
 This way, the Factory Design Pattern makes it easy to add new types of toys (like planes or robots) without changing the code that uses the factory. Just like in a real toy factory, you can add new machines to make new toys without changing the entire factory setup.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
